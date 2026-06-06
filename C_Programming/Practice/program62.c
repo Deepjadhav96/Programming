@@ -1,21 +1,27 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int CountEven(int Arr[], int iSize)
+int frequency(int Arr[], int iSize)
 {
     int iCnt = 0;
-    int iCount = 0;
-
+    int iOddCount = 0, iEvenCount = 0;
+    int iDiff = 0;
+    
     for(iCnt = 0; iCnt < iSize; iCnt++)
     {
        if(Arr[iCnt] % 2 == 0)
        {
-            iCount++;
+            iEvenCount++;
+       }
+       else
+       {
+            iOddCount++;
        }
     }
 
+    iDiff = iEvenCount- iOddCount;
 
-    return iCount;
+    return iDiff;
 }
 
 
@@ -45,9 +51,9 @@ int main()
         scanf("%d",&Brr[iCnt]);
     }
 
-    iRet = CountEven(Brr , iLength);
+    iRet = frequency(Brr , iLength);
 
-    printf("Even numbers are %d\n",iRet);
+    printf("Difference of frequency even and odd number:%d\n",iRet);
 
     free(Brr);
 
@@ -58,7 +64,7 @@ int main()
 ///////////////////////////////////
 ////////
 //////// Enter a number of element: 
-////////  6
+////////  7
 //////// Enter the elements:
 ////////  85
 ////////  66
@@ -66,6 +72,6 @@ int main()
 ////////  80
 ////////  93
 ////////  88
-//////// Even numbers are 3
+//////// Difference of frequency even and odd number: 1 (4 - 3)
 //////// 
 ////////////////////////////////////

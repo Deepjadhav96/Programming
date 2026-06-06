@@ -1,20 +1,20 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
-int CountEven(int Arr[], int iSize)
+int frequency11(int Arr[], int iSize , int iNo)
 {
-    int iCnt = 0;
-    int iCount = 0;
+   int iCnt = 0;
+   int iCount = 0;
 
     for(iCnt = 0; iCnt < iSize; iCnt++)
     {
-       if(Arr[iCnt] % 2 == 0)
+       if(Arr[iCnt] == iNo)
        {
-            iCount++;
+         iCount++;
        }
     }
-
-
+  
     return iCount;
 }
 
@@ -25,10 +25,17 @@ int main()
   
     int *Brr = NULL;
     int iLength,iCnt = 0;
-    int iRet = 0;
+    int iRet = false;
+    int iNo = 0;
 
     printf("Enter a number of element: \n");
     scanf("%d",&iLength);
+
+    printf("Enter a number: \n");
+    scanf("%d",&iNo);
+
+
+    
 
     Brr = (int *)malloc(sizeof(int) * iLength); 
 
@@ -45,9 +52,9 @@ int main()
         scanf("%d",&Brr[iCnt]);
     }
 
-    iRet = CountEven(Brr , iLength);
+    iRet = frequency11(Brr , iLength, iNo);
 
-    printf("Even numbers are %d\n",iRet);
+    printf("frequency of number is: %d \n",iRet);
 
     free(Brr);
 
@@ -55,17 +62,17 @@ int main()
     return 0;
 }
 
-///////////////////////////////////
-////////
+/////////////////////////////////////////
 //////// Enter a number of element: 
-////////  6
+////////  7
+///////// Enter a number: 
+////////  80
 //////// Enter the elements:
-////////  85
+////////  80
 ////////  66
 ////////  3
 ////////  80
 ////////  93
 ////////  88
-//////// Even numbers are 3
-//////// 
-////////////////////////////////////
+///////// Frequency of numbers is : 2 
+//////////////////////////////////////////
