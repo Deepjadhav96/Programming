@@ -15,7 +15,7 @@ bool frequency(int Arr[], int iSize)
        }
     }
 
-    if(iCount < iSize)
+    if(iCount < iS
     {
         return true;
     }
