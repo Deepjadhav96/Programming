@@ -1,19 +1,21 @@
 /*
 Enter a character:
-E
-It's character
+d
+It's Small letter
 
 Enter a character:
-!
-It's not character
+L
+It's not Small letter
 
 */
+
+
 #include<stdio.h>
 #include<stdbool.h>
 
-bool ChkAlpha(char ch)
+bool ChkSmall(char ch)
 {
-    if((ch >= 65 && ch <=90) || (ch>=97 && ch <= 122))
+    if((ch >= 97 && ch <=122))
     {
         return true;
     }
@@ -35,15 +37,15 @@ int main()
     printf("Enter a character:\n");
     scanf("%c",&cValue);
 
-    bRet = ChkAlpha(cValue);
+    bRet = ChkSmall(cValue);
 
     if(bRet == true)
     {
-        printf("It's character\n");
+        printf("It's Small letter\n");
     }
     else
     {
-        printf("It's not character\n");
+        printf("It's not Small letter\n");
     }
 
     return 0;

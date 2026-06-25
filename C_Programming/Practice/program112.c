@@ -1,19 +1,21 @@
 /*
 Enter a character:
-E
-It's character
+a
+It's not Capital letter
 
 Enter a character:
-!
-It's not character
+Z
+It's Capital letter
 
 */
+
+
 #include<stdio.h>
 #include<stdbool.h>
 
-bool ChkAlpha(char ch)
+bool ChkCapital(char ch)
 {
-    if((ch >= 65 && ch <=90) || (ch>=97 && ch <= 122))
+    if((ch >= 65 && ch <=90))
     {
         return true;
     }
@@ -35,15 +37,15 @@ int main()
     printf("Enter a character:\n");
     scanf("%c",&cValue);
 
-    bRet = ChkAlpha(cValue);
+    bRet = ChkCapital(cValue);
 
     if(bRet == true)
     {
-        printf("It's character\n");
+        printf("It's Capital letter\n");
     }
     else
     {
-        printf("It's not character\n");
+        printf("It's not Capital letter\n");
     }
 
     return 0;
