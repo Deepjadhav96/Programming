@@ -6,8 +6,6 @@
 # Step6: FNN model trainig
 # Step7: Model evaluation.
 
-
-
 import pandas as pd
 import numpy as np
 
@@ -18,7 +16,7 @@ from sklearn.metrics import confusion_matrix,accuracy_score
 
 border = "-"*40
 
-#------------------------------------------------------------------------------
+#--------  ----------------------------------------------------------------------
 # Step1: Data loading
 #------------------------------------------------------------------------------
 
